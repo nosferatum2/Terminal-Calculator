@@ -3,7 +3,7 @@ import re
 print("Welcome to my calculator")
 
 def get_input():
-    a = str(input("Enter some number:")).replace(",",".")
+    a = str(input("Enter some number: ")).replace(",",".")
     return a
 
 def test_input():
