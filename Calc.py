@@ -25,6 +25,6 @@ def calc():
     return txt
 
 
-res=eval(calc())
+res = eval(calc())
 
 print(res)
