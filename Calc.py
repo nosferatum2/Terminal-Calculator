@@ -22,7 +22,7 @@ def test_value():
         # Регулярка действия
         r_action = re.match(r"^[\+\-\*\/]{1}$", val)
 
-        if not ((r_nums and i % 2 == 0) or (r_action and i % 2 == 1)):
+        if not ((r_nums and i % 2 == 0 and val) or (r_action and i % 2 == 1 and val)):
             print("Incorrect value! repeat Entry!")
         else:
             while val[0] == "0" and len(val) > 1:
@@ -48,6 +48,8 @@ def calc():
     return str1
 
 
-res = eval(calc())
-
-print(res)
+try:
+    res = eval(calc())
+    print((res))
+except ZeroDivisionError:
+    print("You cant divide by zero!")
